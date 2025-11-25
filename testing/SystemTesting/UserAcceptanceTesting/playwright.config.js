@@ -1,5 +1,8 @@
 // playwright.config.js
 const { defineConfig } = require('@playwright/test');
+const path = require('path');
+// load .env so BASE_URL (and other vars) are available to the config
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 module.exports = defineConfig({
   testDir: './tests',

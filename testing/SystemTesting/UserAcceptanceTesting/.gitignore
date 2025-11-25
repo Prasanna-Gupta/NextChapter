@@ -47,3 +47,9 @@ yarn-cache/
 # Python cache (if any accidentally created)
 __pycache__/
 *.pyc
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
