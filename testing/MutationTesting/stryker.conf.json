@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "testRunner": "vitest",
+  "coverageAnalysis": "off",
+  "concurrency": 8,
+  "mutate": [
+    "src/components/CountUp.jsx",
+    "src/components/ProtectedRoute.jsx",
+    "src/components/TrendingBooks.jsx",
+    "src/lib/trendingUtils.js",
+    "src/lib/bookUtils.js",
+    "src/lib/personalizationUtils.js"
+  ],
+  "mutator": {
+    "excludedMutations": [
+      "StringLiteral",
+      "ObjectLiteral",
+      "ArrayDeclaration"
+    ]
+  },
+  "reporters": ["progress", "html"],
+  "htmlReporter": {
+    "fileName": "reports/mutation/mutation.html"
+  },
+  "timeoutMS": 10000,
+  "timeoutFactor": 1.5,
+  "disableBail": false,
+  "maxTestRunnerReuse": 20
+}
